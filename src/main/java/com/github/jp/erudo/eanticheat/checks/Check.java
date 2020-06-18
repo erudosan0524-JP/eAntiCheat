@@ -1,6 +1,6 @@
 package com.github.jp.erudo.eanticheat.checks;
 
-public enum Level {
+public class Check {
 
-	PROBABLY,DEFINITELY,PASSED
+
 }
