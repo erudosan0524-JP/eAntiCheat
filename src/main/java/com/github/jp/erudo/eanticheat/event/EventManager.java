@@ -47,4 +47,9 @@ public class EventManager {
 			}
 		});
 	}
+
+	public void unregisterListener(EACListener listener) {
+		//:: メソッド参照
+		listenerMethods.stream().filter(lm -> lm.getListener().equals(listener)).forEach(listenerMethods::remove);
+	}
 }

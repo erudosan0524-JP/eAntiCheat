@@ -5,9 +5,12 @@ import java.lang.reflect.Method;
 import org.bukkit.plugin.Plugin;
 
 import com.github.jp.erudo.eanticheat.event.Listen;
-import com.github.jp.erudo.eanticheat.utils.WrappedClass;
-import com.github.jp.erudo.eanticheat.utils.WrappedMethod;
 
+import io.github.erudo.eac.protocol.api.channel.reflections.WrappedClass;
+import io.github.erudo.eac.protocol.api.channel.reflections.WrappedMethod;
+import lombok.Getter;
+
+@Getter
 public class ListenerMethod {
 	private Plugin plugin;
 	private WrappedClass listenerClass;

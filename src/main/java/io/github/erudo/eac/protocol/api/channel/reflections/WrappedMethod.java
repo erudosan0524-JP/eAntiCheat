@@ -1,4 +1,4 @@
-package com.github.jp.erudo.eanticheat.utils;
+package io.github.erudo.eac.protocol.api.channel.reflections;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;

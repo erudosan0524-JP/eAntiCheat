@@ -4,7 +4,7 @@ import com.github.jp.erudo.eanticheat.checks.Check;
 import com.github.jp.erudo.eanticheat.checks.CheckInterface;
 import com.github.jp.erudo.eanticheat.checks.CheckType;
 import com.github.jp.erudo.eanticheat.event.EACEvent;
-import com.github.jp.erudo.eanticheat.utils.User;
+import com.github.jp.erudo.eanticheat.utils.user.User;
 
 public class SpeedA extends Check implements CheckInterface {
 

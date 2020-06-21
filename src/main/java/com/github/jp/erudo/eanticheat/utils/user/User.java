@@ -1,4 +1,4 @@
-package com.github.jp.erudo.eanticheat.utils;
+package com.github.jp.erudo.eanticheat.utils.user;
 
 import java.util.ArrayList;
 import java.util.List;
