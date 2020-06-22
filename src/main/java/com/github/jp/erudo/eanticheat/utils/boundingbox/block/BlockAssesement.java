@@ -3,10 +3,10 @@ package com.github.jp.erudo.eanticheat.utils.boundingbox.block;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.block.data.type.TrapDoor;
 import org.bukkit.block.data.type.Chest;
 import org.bukkit.block.data.type.Door;
 import org.bukkit.block.data.type.Stairs;
+import org.bukkit.block.data.type.TrapDoor;
 import org.bukkit.material.PistonBaseMaterial;
 import org.bukkit.material.PistonExtensionMaterial;
 import org.bukkit.material.PressurePlate;
@@ -35,7 +35,8 @@ public class BlockAssesement {
     }
 
 
-    public void update(BoundingBox bb, Block block, World world) {
+    @SuppressWarnings("deprecation")
+	public void update(BoundingBox bb, Block block, World world) {
 
         if (user.isChunkLoaded()) {
 

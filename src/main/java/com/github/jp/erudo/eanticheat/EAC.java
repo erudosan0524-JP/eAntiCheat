@@ -64,7 +64,6 @@ public class EAC extends JavaPlugin {
 
 		instance = this;
 		userManager = new UserManager();
-		versionUtil = new VersionUtil();
 
 		protocolHandler = new ProtocolHandler();
 
@@ -78,6 +77,7 @@ public class EAC extends JavaPlugin {
 
 		Bukkit.getOnlinePlayers().forEach(player -> ProtocolHandler.getInstance().addChannel(player));
 
+		versionUtil = new VersionUtil();
 
 		//boundingbox関連(ブロックやエンティティの当たり判定のこと)
 		this.blockBoxManager = new BlockBoxManager();

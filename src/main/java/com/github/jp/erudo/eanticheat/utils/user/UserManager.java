@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import lombok.Getter;
+
+@Getter
 public class UserManager {
 
 	private List<User> users;

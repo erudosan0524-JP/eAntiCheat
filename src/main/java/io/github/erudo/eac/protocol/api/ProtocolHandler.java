@@ -62,7 +62,8 @@ public class ProtocolHandler {
 
             String name = packet.getClass().getName();
             int index = name.lastIndexOf(".");
-            String packetName = name.substring(index + 1).replace("PacketPlayInUseItem", "PacketPlayInBlockPlace").replace(Packet.Client.LEGACY_LOOK, Packet.Client.LOOK).replace(Packet.Client.LEGACY_POSITION, Packet.Client.POSITION).replace(Packet.Client.LEGACY_POSITION_LOOK, Packet.Client.POSITION_LOOK);
+            @SuppressWarnings("deprecation")
+			String packetName = name.substring(index + 1).replace("PacketPlayInUseItem", "PacketPlayInBlockPlace").replace(Packet.Client.LEGACY_LOOK, Packet.Client.LOOK).replace(Packet.Client.LEGACY_POSITION, Packet.Client.POSITION).replace(Packet.Client.LEGACY_POSITION_LOOK, Packet.Client.POSITION_LOOK);
 
             User user = EAC.userManager.getUser(sender.getUniqueId());
             PacketEvent event = new PacketEvent(sender, packet, packetName, PacketEvent.Direction.CLIENT);

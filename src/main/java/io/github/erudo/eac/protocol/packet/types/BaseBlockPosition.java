@@ -7,6 +7,7 @@ import io.github.erudo.eac.protocol.api.channel.reflections.WrappedClass;
 import io.github.erudo.eac.protocol.api.channel.reflections.WrappedConstructor;
 import io.github.erudo.eac.protocol.reflection.FieldAccessor;
 
+@SuppressWarnings("unchecked")
 public class BaseBlockPosition extends NMSObject {
     public static final BaseBlockPosition ZERO = new BaseBlockPosition(0, 0, 0);
     private static FieldAccessor<Integer> fieldX;
