@@ -8,13 +8,15 @@ import org.bukkit.entity.Player;
 import io.github.erudo.eac.protocol.api.ProtocolVersion;
 import io.github.erudo.eac.protocol.api.channel.reflections.Reflections;
 import io.github.erudo.eac.protocol.api.channel.reflections.WrappedField;
+import io.github.erudo.eac.protocol.reflection.Reflection;
 
 public abstract class ChannelHandlerAbstract {
 	static final WrappedField networkManagerField = Reflections.getNMSClass("PlayerConnection").getFieldByName("networkManager");
 	static final WrappedField playerConnectionField = Reflections.getNMSClass("EntityPlayer").getFieldByName("playerConnection");
 
 	//遮断しなければならないPacket
-
+	static final Class<?> PACKET_SET_PROTOCOL = Reflection.getMinecraftClass("PacketHandshakingInSetProtocol");
+    static final Class<?> PACKET_LOGIN_IN_START = Reflection.getMinecraftClass("PacketLoginInStart");
 
 	final Executor addChannelHandlerExecutor;
 	final Executor removeChannelHandlerExecutor;

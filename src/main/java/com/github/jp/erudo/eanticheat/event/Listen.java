@@ -5,8 +5,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.github.jp.erudo.eanticheat.listener.ListenerPriority;
-
 
 //ListenerPriorityを実際にListenするときに適応させるためのアノテーションインターフェイス
 @Retention(value = RetentionPolicy.RUNTIME)

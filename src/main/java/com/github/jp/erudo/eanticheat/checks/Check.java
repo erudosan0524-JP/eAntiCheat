@@ -1,7 +1,7 @@
 package com.github.jp.erudo.eanticheat.checks;
 
 import com.github.jp.erudo.eanticheat.event.EACEvent;
-import com.github.jp.erudo.eanticheat.listener.EACListener;
+import com.github.jp.erudo.eanticheat.event.EACListener;
 import com.github.jp.erudo.eanticheat.utils.user.User;
 
 public class Check implements EACListener , CheckInterface{

@@ -1,5 +1,6 @@
 package io.github.erudo.eac.protocol.api.channel.reflections;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
@@ -21,4 +22,18 @@ public class WrappedMethod {
 		this.name = method.getName();
 		this.parameters = Arrays.asList(method.getParameterTypes());
 	}
+
+	@SuppressWarnings("unchecked")
+	public <T> T invoke(Object object, Object... args) {
+        try {
+            return (T) this.method.invoke(object, args);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+        //    e.printStackTrace();
+        }
+        return null;
+    }
+
+    public int getModifiers() {
+        return this.method.getModifiers();
+    }
 }

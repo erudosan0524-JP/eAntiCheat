@@ -11,8 +11,12 @@ import com.github.jp.erudo.eanticheat.EAC;
 import com.github.jp.erudo.eanticheat.utils.user.User;
 
 import io.github.erudo.eac.protocol.api.ProtocolVersion;
+import io.github.erudo.eac.protocol.api.channel.handler.ChannelHandler1_7;
+import io.github.erudo.eac.protocol.api.channel.handler.ChannelHandler1_8;
 import io.github.erudo.eac.protocol.api.channel.handler.ChannelHandlerAbstract;
+import lombok.Getter;
 
+@Getter
 public class ChannelInjector implements Listener {
 
 	private ChannelHandlerAbstract channel;

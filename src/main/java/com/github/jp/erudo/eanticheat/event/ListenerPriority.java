@@ -1,4 +1,4 @@
-package com.github.jp.erudo.eanticheat.listener;
+package com.github.jp.erudo.eanticheat.event;
 
 import lombok.Getter;
 
