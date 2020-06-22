@@ -41,7 +41,7 @@ public class EAC extends JavaPlugin {
 	public static UserManager userManager;
 	public static String bukkitVersion;
 	public static VersionUtil versionUtil;
-	private EventManager eventManager;
+	private EventManager eventManager = new EventManager();
 	private ScheduledExecutorService executorService;
     private BlockBoxManager blockBoxManager;
     private BoundingBoxes boxes;
@@ -85,7 +85,7 @@ public class EAC extends JavaPlugin {
 
         RunUtils.taskTimer(() -> {
             for (World world : Bukkit.getWorlds()) {
-                Object vWorld = CraftReflection.getVanillaWorld(world);
+            	Object vWorld = CraftReflection.getVanillaWorld(world);
 
                 List<Object> vEntities = Collections.synchronizedList(EAC.getInstance().getEntityList().get(vWorld));
 
